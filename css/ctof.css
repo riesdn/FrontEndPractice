@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+    text-align: center;
+}
+
+body {
+    margin: 5%;
+}
+
+.degC, 
+.btns,
+.degF {
+    display: inline-block;
+}
+
+#myBtn,
+input,
+label {
+    display: block;
+}
+
+#myBtn:first-of-type {
+    margin-bottom: 1px;
+}

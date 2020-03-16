@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 1%;
+    text-align: center;
+}
+
+title {
+    display: none;
+}
+
+p {
+    background-color: thistle;
+    padding: 1%;
+    box-shadow: 5px 5px 5px 1px lightslategray;
+    border-radius: 5%;
+}
+
+button {
+    display: block;
+    margin: auto;
+}

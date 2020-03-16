@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script lang="javascript">
+        document.getElementById("inp").value = "Greg";
+        // while this is in <head>, this doesn't find the input object because the javascript comes BEFORE the input tag
+        // while this is AFTER the relevant object, then it can find the input bc it's already loaded
+    </script>
+</head>
+<body>
+    <input id="inp" type="text" value="">
+</body>
+</html>

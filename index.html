@@ -5,18 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add More</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/index.css">
     <script src="js/index.js"></script>
 </head>
 <body>
     <div style="margin:5%;">
-        <p><input id="sum" type="number" value="0" disabled></p>
+        <p><input id="sum" type="number" value="" disabled></p>
         <p><input id="inp" type="number" value=""></p>
         <div>
-            <button onclick="add()" class="btn btn-primary">Add</button>
-            <button onclick="subtract()" class="btn btn-primary">Subtract</button>
-            <button onclick="multiply()" class="btn btn-primary">Multiply</button>
-            <button onclick="divide()" class="btn btn-primary">Divide</button>
-            <button onclick="clr()" class="btn btn-danger">Clear</button>
+            <button onclick="add()" class="btn btn-primary btn-sml">+</button>
+            <button onclick="subtract()" class="btn btn-primary btn-sml">-</button>
+            <button onclick="multiply()" class="btn btn-primary btn-sml">*</button>
+            <button onclick="divide()" class="btn btn-primary btn-sml">/</button>
+        </div>
+        <div>
+            <button onclick="clr()" class="btn btn-danger btn-sml">Clear</button>
         </div>
     </div>
 </body>

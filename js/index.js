@@ -1,4 +1,6 @@
 
+let ans = 0;
+
 const boxSum = () => {
     return document.getElementById("sum");
 }
@@ -7,35 +9,37 @@ const boxInp = () => {
     return document.getElementById("inp");
 }
 
+const display = () => {
+    boxSum().value = ans;
+    boxInp().value = "";
+    if (ans % 3 == 0 && ans != 0) {
+        boxSum().style.color = "blue";
+    } else {
+        boxSum().style.color = "black";
+    }
+}
+
 const clr = () => {
-    boxSum().value = 0;
-    boxInp().value = 0;
+    ans = 0;
+    display();
 };
 
 const add = () => {
-    let sum = Number(boxSum().value);
-    let inp = Number(boxInp().value);
-    sum += inp;
-    boxSum().value = sum;
+    ans += +boxInp().value;
+    display();
 };
 
 const subtract = () => {
-    let sum = Number(boxSum().value);
-    let inp = Number(boxInp().value);
-    sum -= inp;
-    boxSum().value = sum;
+    ans -= +boxInp().value;
+    display();
 };
 
 const multiply = () => {
-    let sum = Number(boxSum().value);
-    let inp = Number(boxInp().value);
-    sum *= inp;
-    boxSum().value = sum;
+    ans *= +boxInp().value;
+    display();
 }
 
 const divide = () => {
-    let sum = Number(boxSum().value);
-    let inp = Number(boxInp().value);
-    sum /= inp;
-    boxSum().value = sum;
+    ans /= +boxInp().value;
+    display();
 }
