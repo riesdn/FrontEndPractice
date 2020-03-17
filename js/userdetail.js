@@ -5,18 +5,23 @@ $().ready(() => {
 
     console.log("Before the getJSON call.");
 
-    $.getJSON("http://localhost:51764/api/Users/3")
-        .done((u) => {
-            // don't have to declare what type of data users will be bc we're in JS and all variables are flexible or whatever the term was
-            // users is going to contain the data from the call, like the output box in Postman
-            user = u;
-            console.log("User: ", u);
-            display();
-        })
-        .fail((err) => {
-            console.error("ERROR: ", err);
-        })
-    ;
+    $("button").click(() => {
+       let uId = $("#getU").val(); 
+       
+       $.getJSON(`http://localhost:51764/api/Users/${uId}`)
+           .done((u) => {
+               // don't have to declare what type of data users will be bc we're in JS and all variables are flexible or whatever the term was
+               // users is going to contain the data from the call, like the output box in Postman
+               user = u;
+               console.log("User: ", u);
+               display();
+           })
+           .fail((err) => {
+               console.error("ERROR: ", err);
+           })
+       ;
+
+    });
 
     console.log("After the getJSON call.");
 

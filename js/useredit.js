@@ -1,8 +1,8 @@
 
 let user = {
-    id: 0,
+    id: 11,
     username: "test",
-    password: "test",
+    password: "changed data",
     firstName: "test",
     lastName: "test",
     phone: null,
@@ -16,13 +16,13 @@ let user = {
 $().ready(() => {
 
     $.ajax({
-        method: "POST",
-        url: "http://localhost:51764/api/Users",
+        method: "PUT",
+        url: "http://localhost:51764/api/Users/11",
         data: JSON.stringify(user),
         contentType: "application/json"
     })
         .done((res) => {
-            console.log(res);
+            console.log("Resolved: ", res);
         })
         .fail((err) => {
             console.error("ERROR: ", err);
